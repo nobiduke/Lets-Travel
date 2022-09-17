@@ -6,9 +6,14 @@
     transition: 3s;
     left: -1254px;
     top: -116px;
+    z-index: -10;
 }
-.canvas:hover{
-    transition: 3s;
-    left:px;
-    top:px
+.airplane{
+    position: absolute;
+    left:48%;
+    top:48%;
+    background-color: blue;
+    width: 90px;
+    height: 30px;
+    z-index: 10;
 }
