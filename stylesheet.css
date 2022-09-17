@@ -42,7 +42,7 @@
     background-color: #F5DEB3;
     left: 46%;
     top: 75%;
-    font-family: bodyText;
+    font-family: titleText;
     transition: 0.5s;
 }
 .fly-button:hover{
