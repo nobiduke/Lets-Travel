@@ -125,24 +125,6 @@ const COUNTRIES = {
 		"dialling_code": "+374",
 		"isoCode": "051"
 	},
-	"Aruba": {
-		"name": "Aruba",
-		"code": "AW",
-		"capital": "Oranjestad",
-		"region": "SA",
-		"currency": {
-			"code": "AWG",
-			"name": "Aruban florin",
-			"symbol": "\u0192"
-		},
-		"language": {
-			"code": "nl",
-			"name": "Dutch"
-		},
-		"flag": "https://restcountries.eu/data/abw.svg",
-		"dialling_code": "+297",
-		"isoCode": "533"
-	},
 	"Australia": {
 		"name": "Australia",
 		"code": "AU",
