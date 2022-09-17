@@ -14,11 +14,10 @@
 }
 .airplane{
     position: absolute;
-    left:48%;
+    left:47%;
     top:48%;
-    background-color: blue;
-    width: 90px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     z-index: 10;
 }
 .fly-button{
