@@ -4,6 +4,11 @@
 .canvas{
     position: absolute;
     transition: 3s;
-    left: 400px;
-    right: 400px;
+    left: -1254px;
+    top: -116px;
+}
+.canvas:hover{
+    transition: 3s;
+    left:px;
+    top:px
 }
