@@ -4183,7 +4183,6 @@ function Pick(){
 }
 
 function Display(country){
-    console.log(country);
     nameCountryElem.innerHTML = country.name;
 
     facts.innerHTML = "";

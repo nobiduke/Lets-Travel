@@ -14,33 +14,48 @@
 }
 .airplane{
     position: absolute;
-    left:47%;
-    top:48%;
+    left:46%;
+    top:41%;
     width: 100px;
     height: 100px;
     z-index: 10;
 }
 .fly-button{
     position: absolute;
-    left: 48%;
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #F5DEB3;
+    left: 46%;
+    top: 75%;
+}
+.fly-button:hover{
+    position: absolute;
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #bcab8b;
+    left: 46%;
     top: 75%;
 }
 .hidden-box{
     opacity: 0;
+    transition: 3s;
     position: absolute;
     left: 55%;
     top: 30%;
     padding-top: 15px;
     padding-left: 10px;
     border-radius: 10px;
-    background-color: maroon;
+    background-color: 	#F5DEB3;
 }
 .info-box{
     opacity: 1;
+    transition: 3s;
     position: absolute;
     left: 55%;
     top: 30%;
     padding: 15px;
     border-radius: 10px;
-    background-color: maroon;
+    background-color: 	#F5DEB3;
 }
