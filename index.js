@@ -4145,13 +4145,16 @@ const COUNTRIES = {
 //
 //
 
-const displacement = [774, 345];
+const displacement = [760, 340];
 
 let elem = document.getElementById('world');
 let infoBox = document.getElementById('info-box');
 let nameCountryElem = document.getElementById('name');
 let facts = document.getElementById('facts');
 let image = document.getElementById('flag');
+var isMoving = false;
+
+const toggleMoving = ()=>isMoving = isMoving?false:true;
 
 const CalcX = (baseX) => {
     baseX = parseInt(baseX);
@@ -4162,12 +4165,15 @@ const CalcY = (baseY) => {
     return (-1*baseY + displacement[1]);
 }
 
-function Move(country){
-    // infoBox.classList.add('hidden-box');
-    // infoBox.classList.remove('info-box');
+function Move(country, coords){
+    infoBox.classList.add('hidden-box');
+    infoBox.classList.remove('info-box');
 
-    elem.style.left = `${CalcX(country.x)}px`;
-    elem.style.top = `${CalcY(country.y)}px`;
+    toggleMoving();
+    elem.style.left = `${CalcX(coords.x)}px`;
+    elem.style.top = `${CalcY(coords.y)}px`;
+    setTimeout(toggleMoving, 3000);
+    Display(country);
 }
 
 function Pick(){
@@ -4191,12 +4197,14 @@ function Display(country){
 }
 
 document.getElementById('fly-button').addEventListener('click', (e)=>{
+    if(isMoving){
+        return;
+    }
     let countryName = Pick();
 
     let count = COUNTRIES[countryName];
+    let coords = 0;
 
-    Display(count);
-
-    Move({'x':"2055",
-    "y": "1268"});
+    Move(count, {"x": "1232",
+    "y": "1203"});
 });
