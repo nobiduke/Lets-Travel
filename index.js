@@ -6,6 +6,7 @@ let infoBox = document.getElementById('info-box');
 let nameCountryElem = document.getElementById('name');
 let facts = document.getElementById('facts');
 let image = document.getElementById('flag');
+let airplane = document.getElementById('airplane');
 var isMoving = false;
 
 const toggleMoving = ()=>isMoving = isMoving?false:true;
@@ -23,11 +24,13 @@ function Move(country, coords){
     infoBox.classList.add('hidden-box');
     infoBox.classList.remove('info-box');
 
+    airplane.classList.add('airplane-flying');
+    airplane.classList.remove('airplane');
+
     toggleMoving();
     elem.style.left = `${CalcX(coords.x)}px`;
     elem.style.top = `${CalcY(coords.y)}px`;
-    setTimeout(toggleMoving, 3000);
-    Display(country);
+    setTimeout(function(){Display(country);toggleMoving();}, 3000);
 }
 
 function Pick(){
@@ -39,6 +42,9 @@ function Pick(){
 function Display(country){
     nameCountryElem.innerHTML = country.name;
 
+    split_image = country.flag.split('/')
+    image.src = `https://flagcdn.com/${country.code.toLowerCase()}.svg`;
+
     facts.innerHTML = "";
 
     facts.innerHTML += `Capital: ${country['capital']}<br>`;
@@ -47,6 +53,8 @@ function Display(country){
 
     infoBox.classList.add('info-box');
     infoBox.classList.remove('hidden-box');
+    airplane.classList.add('airplane');
+    airplane.classList.remove('airplane-flying');
 }
 
 document.getElementById('fly-button').addEventListener('click', (e)=>{

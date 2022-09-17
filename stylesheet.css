@@ -22,6 +22,16 @@
     top:41%;
     width: 100px;
     height: 100px;
+    transition: 1s;
+    z-index: 10;
+}
+.airplane-flying{
+    position: absolute;
+    left:46%;
+    top:41%;
+    width: 120px;
+    height: 120px;
+    transition: 1s;
     z-index: 10;
 }
 .fly-button{
@@ -33,6 +43,7 @@
     left: 46%;
     top: 75%;
     font-family: bodyText;
+    transition: 0.5s;
 }
 .fly-button:hover{
     position: absolute;
@@ -42,10 +53,13 @@
     background-color: #bcab8b;
     left: 46%;
     top: 75%;
+    transition: 0.5s;
+    width: 110px;
+    height: 44px;
 }
 .hidden-box{
     opacity: 0;
-    transition: 3s;
+    transition: 1s;
     position: absolute;
     left: 55%;
     top: 30%;
@@ -57,7 +71,7 @@
 }
 .info-box{
     opacity: 1;
-    transition: 3s;
+    transition: 1s;
     position: absolute;
     left: 55%;
     top: 30%;
@@ -73,4 +87,9 @@
 }
 .facts{
     font-family: bodyText;
+}
+.flag{
+    width:300px;
+    height:200px;
+
 }
