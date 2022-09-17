@@ -1,7 +1,11 @@
 @font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
-  }
+    font-family: bodyText;
+    src: url(./Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: titleText;
+    src: url(./Poppins-SemiBold.ttf);
+}
 .background{
     overflow: hidden;
 }
@@ -44,10 +48,11 @@
     position: absolute;
     left: 55%;
     top: 30%;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
-    background-color: 	#F5DEB3;
+    background-color:#F5DEB3;
 }
 .info-box{
     opacity: 1;
@@ -55,7 +60,16 @@
     position: absolute;
     left: 55%;
     top: 30%;
-    padding: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
-    background-color: 	#F5DEB3;
+    box-shadow: 5px 10px #888888;
+    background-color:#F5DEB3;
+}
+.name{
+    font-family: titleText;
+}
+.facts{
+    font-family: bodyText;
 }
