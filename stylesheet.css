@@ -32,6 +32,7 @@
     background-color: #F5DEB3;
     left: 46%;
     top: 75%;
+    font-family: bodyText;
 }
 .fly-button:hover{
     position: absolute;
