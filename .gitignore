@@ -1,0 +1,5 @@
+node-modules/*
+node-modules
+package.json
+testing
+testing/*
