@@ -1,5 +1,5 @@
 
-const displacement = [760, 340];
+// const displacement = [760, 340];
 
 let elem = document.getElementById('world');
 let infoBox = document.getElementById('info-box');
@@ -11,16 +11,18 @@ var isMoving = false;
 
 const toggleMoving = ()=>isMoving = isMoving?false:true;
 
-const CalcX = (baseX) => {
+const CalcX = (baseX, displacement) => {
     baseX = parseInt(baseX);
     return (-1*baseX + displacement[0]);
 }
-const CalcY = (baseY) => {
+const CalcY = (baseY, displacement) => {
     baseY = parseInt(baseY);
     return (-1*baseY + displacement[1]);
 }
 
 function Move(country, coords){
+    const displacement = [window.innerWidth/2, window.innerHeight/2];
+
     infoBox.classList.add('hidden-box');
     infoBox.classList.remove('info-box');
 
@@ -28,8 +30,8 @@ function Move(country, coords){
     airplane.classList.remove('airplane');
 
     toggleMoving();
-    elem.style.left = `${CalcX(coords.x)}px`;
-    elem.style.top = `${CalcY(coords.y)}px`;
+    elem.style.left = `${CalcX(coords.x, displacement)}px`;
+    elem.style.top = `${CalcY(coords.y, displacement)}px`;
     setTimeout(function(){Display(country);toggleMoving();}, 3000);
 }
 
