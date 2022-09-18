@@ -19,7 +19,7 @@
 .airplane{
     position: absolute;
     left:46%;
-    top:41%;
+    top:39%;
     width: 100px;
     height: 100px;
     transition: 1s;
@@ -28,7 +28,7 @@
 .airplane-flying{
     position: absolute;
     left:46%;
-    top:41%;
+    top:39%;
     width: 120px;
     height: 120px;
     transition: 1s;
